@@ -6,6 +6,7 @@ public class BodyMassIndex
 
     public BodyMassIndex(double height, double weight)
     {
+
         this.height = height;
         this.weight = weight;
     }
@@ -15,7 +16,6 @@ public class BodyMassIndex
         double calculatedBMI = (703 * weight) / (Math.pow(height, 2));
         return calculatedBMI;
     }
-
 
     public String calculateCategory(double bodyMassIndex)
     {
@@ -34,4 +34,5 @@ public class BodyMassIndex
         else
             return "Obesity";
     }
+
 }
