@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class App
 {
+    public static int count = 0;
+
     public static boolean moreInput()
     {
         Scanner in = new Scanner(System.in);
@@ -62,14 +64,27 @@ public class App
         double bodyMassIndex = bmi.calculateBMI(bmi.height, bmi.weight);
         String category = bmi.calculateCategory(bodyMassIndex);
 
-        System.out.printf("\n%.1f\n", bodyMassIndex);
-        System.out.println(category);
+        count++;
+        System.out.println("\nBMI " + count + "'s Calculations: ");
+        System.out.printf("BMI: %.1f\n", bodyMassIndex);
+        System.out.println("Category: " + category);
         System.out.println("\n");
     }
 
     public static void displayBmiStatistics(ArrayList<BodyMassIndex> bmiData)
     {
-
+        double average = 0;
+        double BMIHolder = 0;
+        int count = 0;
+        for(BodyMassIndex b: bmiData)
+        {
+            BMIHolder = b.calculateBMI(b.height, b.weight);
+            average += b.calculateBMI(b.height, b.weight);
+            count++;
+            System.out.printf("Input " + count + "'s BMI Calculation: %.1f\n", BMIHolder);
+        }
+        average = average / count;
+        System.out.printf("Average BMI score of data: %.1f\n", average);
     }
     
     public static void main(String[] args)
