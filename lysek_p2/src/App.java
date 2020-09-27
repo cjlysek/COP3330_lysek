@@ -57,8 +57,14 @@ public class App
         return weight;
     }
 
-    public static void displayBMIInfo()
+    public static void displayBmiInfo(BodyMassIndex bmi)
     {
+        double bodyMassIndex = bmi.calculateBMI(bmi.height, bmi.weight);
+        String category = bmi.calculateCategory(bodyMassIndex);
+        System.out.printf("\n%.2f\n", bodyMassIndex);
+        System.out.println(category);
+        System.out.println("\n");
+
 
     }
 
@@ -70,10 +76,10 @@ public class App
             double height = getUserHeight();
             double weight = getUserWeight();
 
-            //BodyMassIndex bmi = new BodyMassIndex(height, weight);
-            //bmiData.add(bmi);
+            BodyMassIndex bmi = new BodyMassIndex(height, weight);
+            bmiData.add(bmi);
 
-            //displayBmiInfo(bmi);
+            displayBmiInfo(bmi);
         }
 
         //displayBmiStatistics(bmiData);
