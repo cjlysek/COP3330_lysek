@@ -61,11 +61,10 @@ public class App
     {
         double bodyMassIndex = bmi.calculateBMI(bmi.height, bmi.weight);
         String category = bmi.calculateCategory(bodyMassIndex);
+
         System.out.printf("\n%.2f\n", bodyMassIndex);
         System.out.println(category);
         System.out.println("\n");
-
-
     }
 
     public static void main(String[] args)
