@@ -1,4 +1,5 @@
-public class Triangle extends Shape {
+public class Triangle extends Shape
+{
     private double num1;
     private double num2;
 

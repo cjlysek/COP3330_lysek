@@ -1,8 +1,9 @@
-public class Square extends Shape {
+public class Square extends Shape
+{
     private double side;
 
-    public Square(double num1) {
-        this.side = num1;
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
