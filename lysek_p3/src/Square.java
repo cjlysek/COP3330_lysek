@@ -1,14 +1,14 @@
 public class Square extends Shape {
-    private double area;
+    private double side;
 
-    public Square(double i) {
-        this.area = area;
-        area = i;
+    public Square(double num1) {
+        this.side = num1;
     }
 
     @Override
     public double getArea() {
-        return area * area;
+        double area = side * side;
+        return area;
     }
 
     @Override
