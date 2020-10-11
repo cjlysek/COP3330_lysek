@@ -1,6 +1,6 @@
 //Code written by Connor Lysek
 
-public class Cube extends Shape
+public class Cube extends Shape3D
 {
     private double side;
 

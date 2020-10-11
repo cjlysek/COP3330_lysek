@@ -2,7 +2,7 @@
 
 import static java.lang.Math.sqrt;
 
-public class Pyramid extends Shape
+public class Pyramid extends Shape3D
 {
     private double length;
     private double width;

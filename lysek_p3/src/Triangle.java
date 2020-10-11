@@ -1,6 +1,6 @@
 //Code written by Connor Lysek
 
-public class Triangle extends Shape
+public class Triangle extends Shape2D
 {
     private double num1;
     private double num2;
@@ -24,9 +24,5 @@ public class Triangle extends Shape
         return "triangle";
     }
 
-    @Override
-    public double getVolume()
-    {
-        return 0;
-    }
+
 }

@@ -1,6 +1,6 @@
 //Code written by Connor Lysek
 
-public class Sphere extends Shape
+public class Sphere extends Shape3D
 {
     private double radius;
     private final double pi = 3.14159;

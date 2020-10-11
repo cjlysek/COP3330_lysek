@@ -1,6 +1,6 @@
 //Code written by Connor Lysek
 
-public class Square extends Shape
+public class Square extends Shape2D
 {
     private double side;
 
@@ -22,10 +22,6 @@ public class Square extends Shape
         return "square";
     }
 
-    @Override
-    public double getVolume()
-    {
-        return 0;
-    }
+
 
 }

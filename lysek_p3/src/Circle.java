@@ -1,6 +1,6 @@
 //Code written by Connor Lysek
 
-public class Circle extends Shape
+public class Circle extends Shape2D
 {
     private double radius;
     private final double pi = 3.14159;
@@ -23,9 +23,5 @@ public class Circle extends Shape
         return "circle";
     }
 
-    @Override
-    public double getVolume()
-    {
-        return 0;
-    }
+
 }
