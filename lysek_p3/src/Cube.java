@@ -1,8 +1,8 @@
-public class Square extends Shape
+public class Cube extends Shape
 {
     private double side;
 
-    public Square(double side)
+    public Cube(double side)
     {
         this.side = side;
     }
@@ -10,20 +10,20 @@ public class Square extends Shape
     @Override
     public double getArea()
     {
-        double area = side * side;
+        double area = 6 * (Math.pow(side, 2));
         return area;
     }
 
     @Override
     public String getName()
     {
-        return "square";
+        return "cube";
     }
 
     @Override
     public double getVolume()
     {
-        return 0;
+        double volume = Math.pow(side, 3);
+        return volume;
     }
-
 }

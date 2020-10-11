@@ -1,18 +1,27 @@
 public class Circle extends Shape
 {
-    private double num1;
+    private double radius;
+    private final double pi = 3.14159;
     
-    public Circle(double num1) {
-        this.num1 = num1;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        double area = pi * (Math.pow(radius, 2));
+        return area;
     }
 
     @Override
-    public String getName() {
+    public String getName()
+    {
         return "circle";
+    }
+
+    @Override
+    public double getVolume()
+    {
+        return 0;
     }
 }
