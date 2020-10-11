@@ -1,3 +1,5 @@
+//Code written by Connor Lysek
+
 import static java.lang.Math.sqrt;
 
 public class Pyramid extends Shape

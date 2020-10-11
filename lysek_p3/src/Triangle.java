@@ -1,3 +1,5 @@
+//Code written by Connor Lysek
+
 public class Triangle extends Shape
 {
     private double num1;

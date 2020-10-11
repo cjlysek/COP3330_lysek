@@ -1,3 +1,5 @@
+//Code written by Connor Lysek
+
 public class Sphere extends Shape
 {
     private double radius;

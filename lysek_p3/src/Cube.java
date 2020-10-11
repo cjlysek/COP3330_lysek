@@ -1,3 +1,5 @@
+//Code written by Connor Lysek
+
 public class Cube extends Shape
 {
     private double side;
