@@ -1,20 +1,23 @@
+import static java.lang.Math.sqrt;
+
 public class Pyramid extends Shape
 {
-    private double side1;
-    private double side2;
-    private double side3;
+    private double length;
+    private double width;
+    private double height;
 
-    public Pyramid(double side1, double side2, double side3)
+    public Pyramid(double length, double width, double height)
     {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea()
     {
-        return 0;
+        double area = length * width + length * sqrt(Math.pow((width / 2), 2) + Math.pow(height, 2)) + width * sqrt((Math.pow(length / 2, 2) + Math.pow(height, 2)));
+        return area;
     }
 
     @Override
@@ -26,6 +29,7 @@ public class Pyramid extends Shape
     @Override
     public double getVolume()
     {
-        return 0;
+        double volume = length * width * (height / 3);
+        return volume;
     }
 }
