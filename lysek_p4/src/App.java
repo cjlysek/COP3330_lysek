@@ -27,9 +27,10 @@ public class App {
             }
             else if(MainMenu == 2)
             {
-                tasks = new TaskList();
-                loadTaskList();
-                OperationProcedure();
+                //tasks = new TaskList();
+                //loadTaskList();
+                //OperationProcedure();
+                System.out.println("This isn't working right and don't want the program to crash, F");
             }
             else if(MainMenu == 3)
             {
