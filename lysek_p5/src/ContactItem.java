@@ -65,7 +65,7 @@ public class ContactItem
         return this.email;
     }
 
-    public void setEmail()
+    public void setEmail(String email)
     {
         this.email = email;
     }
@@ -90,7 +90,14 @@ public class ContactItem
         return this.editedEmail;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Name: " + getFirstName() + " " +getLastName() + "     " + "Phone Number: " + getPhoneNumber() + "     " + "Email: " + getEmail();
+    }
 }
+
+
 
 class InvalidContactException extends IllegalArgumentException
 {
@@ -99,3 +106,4 @@ class InvalidContactException extends IllegalArgumentException
         super(msg);
     }
 }
+
