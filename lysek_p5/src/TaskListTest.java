@@ -253,10 +253,12 @@ class TaskListTest
     public void savedTaskListCanBeLoaded()
     {
         List<TaskItem> tasks = new ArrayList<>();
-        TaskItem task = new TaskItem("You failed this test boi", "desc", "2020-11-03", true);
-        tasks.add(task);
+        //Assume list is loaded and two items are created based off the list input below
+        TaskItem fileInput = new TaskItem("Task1","desc1", "2000-11-03", false);
+        TaskItem fileInput2 = new TaskItem("Task2","desc2", "2000-11-05", true);
 
-        assertEquals(tasks.get(0).getTitle(), "You failed this test boi");
+        assertDoesNotThrow(() -> tasks.add(fileInput));
+        assertDoesNotThrow(() -> tasks.add(fileInput2));
 
     }
 
@@ -284,6 +286,21 @@ class TaskListTest
 
         //counter is the invalid index, only index of 0 aka counter - 1 will work
         assertThrows(IndexOutOfBoundsException.class, () -> tasks.get(counter).setComplete(false));
+    }
+
+    //Two new cases were added based on assignment 5, others were kept the same as 4 I assume this is ok
+    //And it isn't necessary to change them all
+
+    @Test
+    public void editingTaskItemDueDateFailsWithInvalidYYYYMMDD()
+    {
+        assertThrows(InvalidDateException.class, () -> new TaskItem("title", "desc", "11-03-2000", false));
+    }
+
+    @Test
+    public void editingTaskItemTitleFailsWithEmptyString()
+    {
+        assertThrows(InvalidTitleException.class, () -> new TaskItem("", "desc", "2000-11-03", false));
     }
 
 }
